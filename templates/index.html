@@ -5,7 +5,7 @@
 <section id="home" class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>Alexander Smith</h1>
+            <h1>Andrews Nortey</h1>
             <h2>IT Support Professional & Cloud Computing Enthusiast</h2>
             <p>Transforming technical expertise into cloud solutions</p>
             <div class="hero-buttons">
@@ -21,6 +21,9 @@
     <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='images/placeholder-profile.svg') }}" alt="Andrews Nortey" class="profile-pic">
+            </div>
             <div class="about-text">
                 <p>I'm an experienced IT Support Professional with over 5 years of hands-on experience in troubleshooting, system administration, and network management. Currently, I'm transitioning my career toward Cloud Computing, focusing on AWS and Azure services.</p>
                 <p>My background in IT support has equipped me with a strong foundation in technical problem-solving, customer service, and understanding business technology needs. I'm now leveraging these skills to build scalable, reliable, and secure cloud solutions.</p>
@@ -37,6 +40,9 @@
         <div class="projects-grid">
             {% for project in projects %}
             <div class="project-card">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='images/projects/' + project.image) }}" alt="{{ project.title }}" class="project-img">
+                </div>
                 <h3>{{ project.title }}</h3>
                 <p>{{ project.description }}</p>
                 <div class="technologies">
@@ -113,7 +119,7 @@
                 <h3>Let's Connect</h3>
                 <p>I'm currently open to new opportunities in Cloud Computing and DevOps roles. Feel free to reach out if you'd like to discuss potential collaborations or have any questions about my work.</p>
                 <div class="contact-links">
-                    <a href="mailto:contact@alexandersmith.com"><i class="fas fa-envelope"></i> contact@alexandersmith.com</a>
+                    <a href="mailto:contact@andrewsnortey.com"><i class="fas fa-envelope"></i> contact@andrewsnortey.com</a>
                     <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>

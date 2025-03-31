@@ -26,28 +26,32 @@ cloud_projects = [
         'title': 'AWS EC2 Project: Automated Infrastructure Deployment & Scaling with Terraform and Python',
         'description': 'Developed an automated infrastructure deployment solution using Terraform and Python scripts to provision, configure, and scale EC2 instances based on predefined parameters and real-time metrics.',
         'technologies': ['AWS EC2', 'Terraform', 'Python', 'CloudWatch', 'Auto Scaling'],
-        'github': 'https://github.com/yourusername/aws-ec2-terraform-automation'
+        'github': 'https://github.com/yourusername/aws-ec2-terraform-automation',
+        'image': 'aws-ec2.svg'
     },
     {
         'id': 2,
         'title': 'Automated S3 Data Lifecycle Management with Python (Boto3) & Terraform',
         'description': 'Created a comprehensive data lifecycle management system for S3 buckets that automatically handles data classification, retention policies, and archiving/deletion based on business rules.',
         'technologies': ['AWS S3', 'Python Boto3', 'Terraform', 'AWS Lambda', 'CloudWatch Events'],
-        'github': 'https://github.com/yourusername/s3-lifecycle-automation'
+        'github': 'https://github.com/yourusername/s3-lifecycle-automation',
+        'image': 'aws-s3.svg'
     },
     {
         'id': 3,
         'title': 'Highly Available and Secure AWS VPC for a Scalable Web Application',
         'description': 'Designed and implemented a multi-AZ VPC architecture with proper security controls, network segmentation, and HA configurations to support a scalable web application.',
         'technologies': ['AWS VPC', 'Security Groups', 'NACLs', 'Load Balancing', 'Auto Scaling', 'NAT Gateway'],
-        'github': 'https://github.com/yourusername/secure-ha-vpc'
+        'github': 'https://github.com/yourusername/secure-ha-vpc',
+        'image': 'aws-vpc.svg'
     },
     {
         'id': 4,
         'title': 'Automated Microsoft 365 User Management System (Python & Microsoft Graph API)',
         'description': 'Developed a system that automates the provisioning, deprovisioning, and management of Microsoft 365 users, groups, and licenses through Python scripts and the Microsoft Graph API.',
         'technologies': ['Python', 'Microsoft Graph API', 'Azure AD', 'Microsoft 365', 'REST APIs'],
-        'github': 'https://github.com/yourusername/m365-user-automation'
+        'github': 'https://github.com/yourusername/m365-user-automation',
+        'image': 'microsoft-365.svg'
     }
 ]
 

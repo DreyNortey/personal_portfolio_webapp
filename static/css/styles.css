@@ -281,7 +281,30 @@ About Section
     gap: var(--spacing-lg);
 }
 
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
 .about-text {
+    flex: 2;
     max-width: 100%;
 }
 
@@ -312,6 +335,29 @@ Projects Section
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-color: var(--light-background);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.project-img:hover {
+    transform: scale(1.05);
 }
 
 .project-card h3 {
@@ -665,6 +711,15 @@ Responsive Design
         flex-direction: column;
     }
     
+    .profile-image {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+    
     .about-text {
         order: 2;
     }
@@ -678,6 +733,11 @@ Responsive Design
 @media (max-width: 576px) {
     section {
         padding: var(--spacing-lg) 0;
+    }
+    
+    .profile-pic {
+        width: 180px;
+        height: 180px;
     }
     
     .projects-grid,
