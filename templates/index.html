@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Alexander Smith</h1>
+            <h2>IT Support Professional & Cloud Computing Enthusiast</h2>
+            <p>Transforming technical expertise into cloud solutions</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="{{ url_for('static', filename='resume/resume.pdf') }}" class="btn btn-secondary" download>Download Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm an experienced IT Support Professional with over 5 years of hands-on experience in troubleshooting, system administration, and network management. Currently, I'm transitioning my career toward Cloud Computing, focusing on AWS and Azure services.</p>
+                <p>My background in IT support has equipped me with a strong foundation in technical problem-solving, customer service, and understanding business technology needs. I'm now leveraging these skills to build scalable, reliable, and secure cloud solutions.</p>
+                <p>With a passion for automation and infrastructure as code, I'm constantly expanding my knowledge through certifications, hands-on projects, and continuous learning in cloud technologies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Cloud Projects</h2>
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <div class="technologies">
+                    {% for tech in project.technologies %}
+                    <span class="technology-badge">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                <a href="{{ project.github }}" class="btn btn-sm" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">Skills & Tools</h2>
+        <div class="skills-grid">
+            {% for category, skill_list in skills.items() %}
+            <div class="skill-category">
+                <h3>{{ category }}</h3>
+                <ul class="skill-list">
+                    {% for skill in skill_list %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certifications-grid">
+            {% for cert in certifications %}
+            <div class="certification-card">
+                <h3>{{ cert.name }}</h3>
+                <p><strong>Issuer:</strong> {{ cert.issuer }}</p>
+                <p><strong>Date:</strong> {{ cert.date }}</p>
+                <a href="{{ cert.verification_url }}" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Verify</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+            <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>I'm currently open to new opportunities in Cloud Computing and DevOps roles. Feel free to reach out if you'd like to discuss potential collaborations or have any questions about my work.</p>
+                <div class="contact-links">
+                    <a href="mailto:contact@alexandersmith.com"><i class="fas fa-envelope"></i> contact@alexandersmith.com</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
