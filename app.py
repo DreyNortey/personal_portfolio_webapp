@@ -76,22 +76,16 @@ certifications = [
         'verification_url': 'https://www.credly.com/badges/aws-certified-solutions-architect-associate'
     },
     {
+        'name': 'AWS Certified Cloud Practitioner',
+        'issuer': 'Amazon Web Services',
+        'date': 'January 2023',
+        'verification_url': 'https://www.credly.com/badges/aws-certified-cloud-practitioner'
+    },
+    {
         'name': 'Microsoft Certified: Azure Fundamentals (AZ-900)',
         'issuer': 'Microsoft',
         'date': 'March 2023',
         'verification_url': 'https://www.credly.com/badges/microsoft-certified-azure-fundamentals'
-    },
-    {
-        'name': 'CompTIA Network+',
-        'issuer': 'CompTIA',
-        'date': 'January 2022',
-        'verification_url': 'https://www.credly.com/badges/comptia-network-ce'
-    },
-    {
-        'name': 'CompTIA A+',
-        'issuer': 'CompTIA',
-        'date': 'May 2021',
-        'verification_url': 'https://www.credly.com/badges/comptia-a-ce'
     }
 ]
 
